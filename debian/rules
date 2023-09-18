@@ -1,4 +1,34 @@
 #!/usr/bin/make -f
+# -*- makefile -*-
+
+export DEB_BUILD_MAINT_OPTIONS = hardening=+all optimize=-lto
+
+CMAKE_ARGS = -DBUILD_SHARED_LIBS=ON -DQCORO_BUILD_EXAMPLES=OFF
 
 %:
-	dh $@
+	dh $@ --with pkgkde_symbolshelper
+
+execute_after_dh_auto_clean:
+	rm -rf build-Qt6
+
+override_dh_auto_configure:
+	dh_auto_configure -- $(CMAKE_ARGS) -DUSE_QT_VERSION=5
+	dh_auto_configure --builddirectory=build-Qt6 -- $(CMAKE_ARGS) -DUSE_QT_VERSION=6
+
+override_dh_auto_build:
+	dh_auto_build
+	dh_auto_build --builddirectory=build-Qt6
+
+override_dh_auto_install:
+	dh_auto_install
+	dh_auto_install --builddirectory=build-Qt6
+
+execute_after_dh_install-indep:
+	rm debian/qcoro-doc/usr/share/doc/qcoro-doc/docs/changelog.md
+	rm -r debian/qcoro-doc/usr/share/doc/qcoro-doc/docs/about
+	rm -r debian/qcoro-doc/usr/share/doc/qcoro-doc/docs/overrides
+
+override_dh_auto_test:
+	xvfb-run -- dh_auto_test --no-parallel
+	sleep 2 # we need to wait for the Xserver to shutdown
+	xvfb-run -- dh_auto_test --no-parallel --builddirectory=build-Qt6

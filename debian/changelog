@@ -1,5 +1,183 @@
-template-repository (1.0-1) unstable; urgency=medium
+qcoro (0.9.0-1) unstable; urgency=medium
 
-  * Initial release
+  * Team upload.
+  * New upstream release.
+  * Update symbols files.
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+ -- Pino Toscano <pino@debian.org>  Fri, 16 Jun 2023 07:09:47 +0200
+
+qcoro (0.8.0-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream release.
+  * Update standards version to 4.6.2, no changes needed.
+  * Update symbols files.
+  * Update lintian overrides.
+
+ -- Pino Toscano <pino@debian.org>  Wed, 01 Feb 2023 23:16:33 +0100
+
+qcoro (0.7.0-4) unstable; urgency=medium
+
+  [ Rik Mills ]
+  * debian/rules: Set option to disable building with LTO. Allows
+    syncing direct to Ubuntu with current symbols files.
+
+  [ Sandro Knauß ]
+  * Update symbols against new Qt 6.4.2 (Closes: #1027505).
+
+ -- Sandro Knauß <hefee@debian.org>  Wed, 04 Jan 2023 10:57:15 +0100
+
+qcoro (0.7.0-3) unstable; urgency=medium
+
+  [ Sandro Knauß ]
+  * Upload a new source-only version so it can migrate to testing.
+
+ -- Sandro Knauß <hefee@debian.org>  Wed, 30 Nov 2022 09:02:30 +0100
+
+qcoro (0.7.0-2) unstable; urgency=medium
+
+  [ Sandro Knauß ]
+  * Build QML and QtQuick libs.
+  * Add B-D to run QML and QtQuick tests.
+  * Add new packages for QML and QtQuick.
+
+ -- Sandro Knauß <hefee@debian.org>  Sun, 27 Nov 2022 22:06:11 +0100
+
+qcoro (0.7.0-1) unstable; urgency=medium
+
+  [ Sandro Knauß ]
+  * New upstream release (0.7.0).
+  * Remove upstream applied patches.
+  * Don't build QML and QtQuick libs for the moment.
+  * Update symbols for new version.
+
+ -- Sandro Knauß <hefee@debian.org>  Sun, 27 Nov 2022 16:03:17 +0100
+
+qcoro (0.6.0-5) unstable; urgency=medium
+
+  [ Sandro Knauß ]
+  * d/watch: track versions on github correctly.
+
+ -- Sandro Knauß <hefee@debian.org>  Sat, 24 Sep 2022 15:13:33 +0200
+
+qcoro (0.6.0-4) unstable; urgency=medium
+
+  * Team upload.
+  * Backport upstream commit eba5ec31ba7a270df91986f9af94f688151da9e6 to use
+    -Werror only in debug builds; patch
+    upstream_Only-enable-Werror-and-related-flags-in-debug-mode-f.patch.
+    (Closes: #1016282)
+  * Update symbols files.
+
+ -- Pino Toscano <pino@debian.org>  Sun, 07 Aug 2022 07:45:15 +0200
+
+qcoro (0.6.0-3) unstable; urgency=medium
+
+  * Team upload.
+  * Make the tests fatal again, as they seem to be stable with qcoro 0.6.0.
+
+ -- Pino Toscano <pino@debian.org>  Sun, 10 Jul 2022 20:57:29 +0200
+
+qcoro (0.6.0-2) unstable; urgency=medium
+
+  * Team upload.
+  * Enable the QtWebSockets support:
+    - drop -DQCORO_WITH_QTWEBSOCKETS=OFF from the cmake arguments
+    - add the libqt5websockets5-dev, and libqt6websockets6-dev build
+      dependencies
+    - add the libqcoro5websockets0, and libqcoro6websockets0 packages
+    - add the libqt5websockets5-dev dependency to qcoro-qt5-dev
+    - add the libqt6websockets6-dev deoendency to qcoro-qt6-dev
+
+ -- Pino Toscano <pino@debian.org>  Sun, 10 Jul 2022 12:44:29 +0200
+
+qcoro (0.6.0-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream release.
+  * Update the build dependencies according to the upstream build system:
+    - lower cmake to 3.18.4
+  * Disable the QtWebSockets supports for now, as it requires adding new binary
+    packages
+    - pass -DQCORO_WITH_QTWEBSOCKETS=OFF to cmake
+  * Bump Standards-Version to 4.6.1, no changes required.
+  * Update symbols files.
+  * Update lintian overrides.
+  * CI: align to other KDE sources.
+
+ -- Pino Toscano <pino@debian.org>  Sun, 10 Jul 2022 11:34:52 +0200
+
+qcoro (0.5.1-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream release.
+  * Update the patches:
+    - qcorosignal.diff: drop, fixed upstream
+
+ -- Pino Toscano <pino@debian.org>  Thu, 28 Apr 2022 06:12:29 +0200
+
+qcoro (0.5.0-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream release.
+  * Update the patches:
+    - upstream_Build-Check-if-libatomic-is-required.patch: drop, backported
+      from upstream
+  * Update the build dependencies according to the upstream build system:
+    - bump qt6-base-dev to 6.2.0
+  * Avoid a build failure with GCC 11; patch qcorosignal.diff.
+  * Update install files.
+  * Update symbols files.
+  * Update lintian overrides.
+
+ -- Pino Toscano <pino@debian.org>  Tue, 26 Apr 2022 07:16:54 +0200
+
+qcoro (0.4.0-5) unstable; urgency=medium
+
+  * Team upload.
+  * Factorize the common cmake arguments in qt5/qt6 builds in a single
+    variable.
+  * Pass -DQCORO_BUILD_EXAMPLES=OFF to cmake to disable the build of examples,
+    as nothing is done with them.
+  * Remove the unused ${shlibs:Depends} substvar from qcoro-doc, qcoro-qt5-dev,
+    and qcoro-qt6-dev.
+  * Use execute_after_dh_auto_clean & xecute_after_dh_install-indep instead of
+    manually calling dh_auto_clean & dh_install.
+  * Backport upstream commit 312f2fca861b4c623481da58241a1139e013ef83 to link
+    to the atomic library if needed on the architecture; patch
+    upstream_Build-Check-if-libatomic-is-required.patch. (Closes: #1008615)
+  * Run also the unit tests for the qt6 build in non-fatal mode.
+  * Mark the dbus-x11 build dependency as !nocheck, as it is needed only during
+    dh_auto_test.
+
+ -- Pino Toscano <pino@debian.org>  Sat, 16 Apr 2022 13:10:32 +0200
+
+qcoro (0.4.0-4) unstable; urgency=medium
+
+  * Package tests are too flaky - do not let them fail the package
+    build.
+  * Add Multi-Arch hints for qcoro-*-dev.
+
+ -- Sandro Knauß <hefee@debian.org>  Mon, 07 Mar 2022 11:47:13 +0100
+
+qcoro (0.4.0-3) unstable; urgency=medium
+
+  [ Sandro Knauß ]
+  * Update symbols from buildds for 0.4.0
+
+ -- Sandro Knauß <hefee@debian.org>  Fri, 25 Feb 2022 20:32:10 +0100
+
+qcoro (0.4.0-2) unstable; urgency=medium
+
+  [ Sandro Knauß ]
+  * Add dependencies on dev packages to qtX-dev packages.
+  * Set correct Debian maintainer information.
+  * Add Multi-Arch hints.
+
+ -- Sandro Knauß <hefee@debian.org>  Fri, 25 Feb 2022 20:22:34 +0100
+
+qcoro (0.4.0-1) unstable; urgency=medium
+
+  * Initial release for Debian (Closes: #1006210).
+
+ -- Sandro Knauß <hefee@debian.org>  Mon, 21 Feb 2022 16:18:13 +0100

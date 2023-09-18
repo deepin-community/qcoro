@@ -1,15 +1,201 @@
-Source: template-repository
-Section: unknown
+Source: qcoro
+Section: libs
 Priority: optional
-Maintainer: Tsic404 <liuheng@deepin.org>
-Build-Depends: debhelper (>= 11)
-Standards-Version: 4.1.3
-Homepage: https://github.com/deepin-community/template-repository
-#Vcs-Browser: https://salsa.debian.org/debian/deepin-community-template-repository
-#Vcs-Git: https://salsa.debian.org/debian/deepin-community-template-repository.git
+Maintainer: Debian KDE Extras Team <pkg-kde-extras@lists.alioth.debian.org>
+Uploaders: Sandro Knauß <hefee@debian.org>
+Build-Depends: cmake (>= 3.18.4~),
+               dbus-x11 <!nocheck>,
+               debhelper-compat (= 13),
+               libqt5websockets5-dev (>= 5.15.0~),
+               libqt6opengl6-dev,
+               libqt6websockets6-dev (>= 6.2.0~),
+               pkg-kde-tools,
+               qml-module-qtquick-controls <!nocheck>,
+               qml6-module-qtqml-workerscript <!nocheck>,
+               qml6-module-qtquick <!nocheck>,
+               qt6-base-dev (>= 6.2.0~),
+               qt6-base-private-dev,
+               qt6-declarative-dev,
+               qt6-declarative-private-dev,
+               qtbase5-dev (>= 5.15.0~),
+               qtbase5-private-dev,
+               qtdeclarative5-dev,
+               qtdeclarative5-private-dev,
+               xauth <!nocheck>,
+               xvfb <!nocheck>
+Standards-Version: 4.6.2
+Vcs-Browser: https://salsa.debian.org/qt-kde-team/extras/qcoro
+Vcs-Git: https://salsa.debian.org/qt-kde-team/extras/qcoro.git
+Homepage: https://qcoro.dvratil.cz/
+Rules-Requires-Root: no
 
-Package: template-repository
+Package: libqcoro5core0
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: <insert up to 60 chars description>
- <insert long description, indented with spaces>
+Multi-Arch: same
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Description: C++20 coroutines for Qt5 - Core
+ QCoro is a C++ library that provide set of tools to make use of C++20
+ coroutines in connection with certain asynchronous Qt5 actions.
+ .
+ This is the core library.
+
+Package: libqcoro6core0
+Architecture: any
+Multi-Arch: same
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Description: C++20 coroutines for Qt6 - Core
+ QCoro is a C++ library that provide set of tools to make use of C++20
+ coroutines in connection with certain asynchronous Qt6 actions.
+ .
+ This is the core library.
+
+Package: libqcoro5dbus0
+Architecture: any
+Multi-Arch: same
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Description: C++20 coroutines for Qt5 - DBus
+ QCoro is a C++ library that provide set of tools to make use of C++20
+ coroutines in connection with certain asynchronous Qt5 actions.
+ .
+ This is the DBus library.
+
+Package: libqcoro6dbus0
+Architecture: any
+Multi-Arch: same
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Description: C++20 coroutines for Qt6 - DBus
+ QCoro is a C++ library that provide set of tools to make use of C++20
+ coroutines in connection with certain asynchronous Qt6 actions.
+ .
+ This is the DBus library.
+
+Package: libqcoro5network0
+Architecture: any
+Multi-Arch: same
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Description: C++20 coroutines for Qt5 - Network
+ QCoro is a C++ library that provide set of tools to make use of C++20
+ coroutines in connection with certain asynchronous Qt5 actions.
+ .
+ This is the network library.
+
+Package: libqcoro6network0
+Architecture: any
+Multi-Arch: same
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Description: C++20 coroutines for Qt6 - Network
+ QCoro is a C++ library that provide set of tools to make use of C++20
+ coroutines in connection with certain asynchronous Qt6 actions.
+ .
+ This is the network library.
+
+Package: libqcoro5qml0
+Architecture: any
+Multi-Arch: same
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Description: C++20 coroutines for Qt5 - QML
+ QCoro is a C++ library that provide set of tools to make use of C++20
+ coroutines in connection with certain asynchronous Qt5 actions.
+ .
+ This is the QML library.
+
+Package: libqcoro6qml0
+Architecture: any
+Multi-Arch: same
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Description: C++20 coroutines for Qt6 - QML
+ QCoro is a C++ library that provide set of tools to make use of C++20
+ coroutines in connection with certain asynchronous Qt6 actions.
+ .
+ This is the QML library.
+
+Package: libqcoro5quick0
+Architecture: any
+Multi-Arch: same
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Description: C++20 coroutines for Qt5 - QtQuick
+ QCoro is a C++ library that provide set of tools to make use of C++20
+ coroutines in connection with certain asynchronous Qt5 actions.
+ .
+ This is the QtQuick library.
+
+Package: libqcoro6quick0
+Architecture: any
+Multi-Arch: same
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Description: C++20 coroutines for Qt6 - QtQuick
+ QCoro is a C++ library that provide set of tools to make use of C++20
+ coroutines in connection with certain asynchronous Qt6 actions.
+ .
+ This is the QtQuick library.
+
+Package: libqcoro5websockets0
+Architecture: any
+Multi-Arch: same
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Description: C++20 coroutines for Qt5 - WebSockets
+ QCoro is a C++ library that provide set of tools to make use of C++20
+ coroutines in connection with certain asynchronous Qt5 actions.
+ .
+ This is the web sockets library.
+
+Package: libqcoro6websockets0
+Architecture: any
+Multi-Arch: same
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Description: C++20 coroutines for Qt6 - WebSockets
+ QCoro is a C++ library that provide set of tools to make use of C++20
+ coroutines in connection with certain asynchronous Qt6 actions.
+ .
+ This is the web sockets library.
+
+Package: qcoro-doc
+Architecture: all
+Multi-Arch: foreign
+Depends: ${misc:Depends}
+Section: doc
+Description: C++20 coroutines for Qt5 - documentation & examples
+ QCoro is a C++ library that provide set of tools to make use of C++20
+ coroutines in connection with certain asynchronous Qt actions.
+ .
+ This package has the examples and documentation files.
+
+Package: qcoro-qt5-dev
+Architecture: any
+Multi-Arch: same
+Depends: libqcoro5core0 (= ${binary:Version}),
+         libqcoro5dbus0 (= ${binary:Version}),
+         libqcoro5network0 (= ${binary:Version}),
+         libqcoro5qml0 (= ${binary:Version}),
+         libqcoro5quick0 (= ${binary:Version}),
+         libqcoro5websockets0 (= ${binary:Version}),
+         libqt5websockets5-dev (>= 5.15.0~),
+         qtbase5-dev (>= 5.15.0~),
+         ${misc:Depends}
+Recommends: qcoro-doc
+Section: libdevel
+Description: C++20 coroutines for Qt5 - development
+ QCoro is a C++ library that provide set of tools to make use of C++20
+ coroutines in connection with certain asynchronous Qt5 actions.
+ .
+ This package has the development files.
+
+Package: qcoro-qt6-dev
+Architecture: any
+Multi-Arch: same
+Depends: libqcoro6core0 (= ${binary:Version}),
+         libqcoro6dbus0 (= ${binary:Version}),
+         libqcoro6network0 (= ${binary:Version}),
+         libqcoro6qml0 (= ${binary:Version}),
+         libqcoro6quick0 (= ${binary:Version}),
+         libqcoro6websockets0 (= ${binary:Version}),
+         libqt6websockets6-dev (>= 6.2.0~),
+         qt6-base-dev (>= 6.2.0~),
+         ${misc:Depends}
+Recommends: qcoro-doc
+Section: libdevel
+Description: C++20 coroutines for Qt6 - development
+ QCoro is a C++ library that provide set of tools to make use of C++20
+ coroutines in connection with certain asynchronous Qt6 actions.
+ .
+ This package has the development files.

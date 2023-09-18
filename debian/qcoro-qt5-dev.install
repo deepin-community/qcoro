@@ -1,0 +1,4 @@
+usr/include/qcoro5/
+usr/lib/*/cmake/QCoro5*
+usr/lib/*/libQCoro5*.so
+usr/lib/*/qt5/mkspecs/modules/qt_QCoro*.pri

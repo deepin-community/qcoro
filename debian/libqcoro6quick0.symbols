@@ -1,0 +1,25 @@
+# SymbolsHelper-Confirmed: 0.7.0 amd64
+libQCoro6Quick.so.0 libqcoro6quick0 #MINVER#
+* Build-Depends-Package: qcoro-qt6-dev
+ _ZN5QCoro13ImageProvider20requestImageResponseERK7QStringRK5QSize@Base 0.7.0
+ _ZN5QCoro13ImageProviderC1Ev@Base 0.7.0
+ _ZN5QCoro13ImageProviderC2Ev@Base 0.7.0
+ _ZN5QCoro18QCoroImageResponse14reportFinishedEO6QImage@Base 0.7.0
+ _ZN5QCoro18QCoroImageResponseD0Ev@Base 0.7.0
+ _ZN5QCoro18QCoroImageResponseD1Ev@Base 0.7.0
+ _ZN5QCoro18QCoroImageResponseD2Ev@Base 0.7.0
+ _ZNK5QCoro18QCoroImageResponse14textureFactoryEv@Base 0.7.0
+ _ZNKSt18bad_variant_access4whatEv@Base 0.7.0
+ _ZNSt18bad_variant_accessD0Ev@Base 0.7.0
+ _ZNSt18bad_variant_accessD1Ev@Base 0.7.0
+ _ZNSt18bad_variant_accessD2Ev@Base 0.7.0
+ _ZSt26__throw_bad_variant_accessPKc@Base 0.7.0
+ _ZTIN5QCoro13ImageProviderE@Base 0.7.0
+ _ZTIN5QCoro18QCoroImageResponseE@Base 0.7.0
+ _ZTISt18bad_variant_access@Base 0.7.0
+ _ZTSN5QCoro13ImageProviderE@Base 0.7.0
+ _ZTSN5QCoro18QCoroImageResponseE@Base 0.7.0
+ _ZTSSt18bad_variant_access@Base 0.7.0
+ _ZTVN5QCoro13ImageProviderE@Base 0.7.0
+ _ZTVN5QCoro18QCoroImageResponseE@Base 0.7.0
+ _ZTVSt18bad_variant_access@Base 0.7.0

@@ -1,3 +1,9 @@
+qcoro (0.9.0-2) unstable; urgency=medium
+
+  * Remove libqt6opengl6-dev dependency.
+
+ -- Wang Zichong <wangzichong@deepin.org> Tue, 31 Oct 2023 16:16:00 +0800
+
 qcoro (0.9.0-1) unstable; urgency=medium
 
   * Team upload.

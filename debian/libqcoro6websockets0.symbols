@@ -1,4 +1,4 @@
-# SymbolsHelper-Confirmed: 0.9.0 amd64 i386
+# SymbolsHelper-Confirmed: 0.10.0 amd64 i386
 libQCoro6WebSockets.so.0 libqcoro6websockets0 #MINVER#
 * Build-Depends-Package: qcoro-qt6-dev
  (optional=templinst)_Z41qRegisterNormalizedMetaTypeImplementationIP10QWebSocketEiRK10QByteArray@Base 0.7.0

@@ -1,4 +1,4 @@
-# SymbolsHelper-Confirmed: 0.9.0 amd64 i386
+# SymbolsHelper-Confirmed: 0.10.0 amd64 i386
 libQCoro6Core.so.0 libqcoro6core0 #MINVER#
 * Build-Depends-Package: qcoro-qt6-dev
  (optional=templinst)_Z41qRegisterNormalizedMetaTypeImplementationIN8QProcess10ExitStatusEEiRK10QByteArray@Base 0.7.0
@@ -21,14 +21,18 @@ libQCoro6Core.so.0 libqcoro6core0 #MINVER#
  _ZN5QCoro13ThreadContextD2Ev@Base 0.8.0
  (optional=templinst)_ZN5QCoro4TaskI10QByteArrayED1Ev@Base 0.5.0
  (optional=templinst)_ZN5QCoro4TaskI10QByteArrayED2Ev@Base 0.5.0
- (optional=templinst)_ZN5QCoro4TaskIN6QTimer14QPrivateSignalEED1Ev@Base 0.5.0
- (optional=templinst)_ZN5QCoro4TaskIN6QTimer14QPrivateSignalEED2Ev@Base 0.5.0
- (optional=templinst)_ZN5QCoro4TaskISt8optionalIN6QTimer14QPrivateSignalEEED1Ev@Base 0.5.0
- (optional=templinst)_ZN5QCoro4TaskISt8optionalIN6QTimer14QPrivateSignalEEED2Ev@Base 0.5.0
- (optional=templinst)_ZN5QCoro4TaskISt8optionalIN7QThread14QPrivateSignalEEED1Ev@Base 0.5.0
- (optional=templinst)_ZN5QCoro4TaskISt8optionalIN7QThread14QPrivateSignalEEED2Ev@Base 0.5.0
- (optional=templinst)_ZN5QCoro4TaskISt8optionalIN8QProcess14QPrivateSignalEEED1Ev@Base 0.5.0
- (optional=templinst)_ZN5QCoro4TaskISt8optionalIN8QProcess14QPrivateSignalEEED2Ev@Base 0.5.0
+#MISSING: 0.10.0# (optional=templinst)_ZN5QCoro4TaskIN6QTimer14QPrivateSignalEED1Ev@Base 0.5.0
+#MISSING: 0.10.0# (optional=templinst)_ZN5QCoro4TaskIN6QTimer14QPrivateSignalEED2Ev@Base 0.5.0
+ (optional=templinst)_ZN5QCoro4TaskISt5tupleIJEEED1Ev@Base 0.10.0
+ (optional=templinst)_ZN5QCoro4TaskISt5tupleIJEEED2Ev@Base 0.10.0
+#MISSING: 0.10.0# (optional=templinst)_ZN5QCoro4TaskISt8optionalIN6QTimer14QPrivateSignalEEED1Ev@Base 0.5.0
+#MISSING: 0.10.0# (optional=templinst)_ZN5QCoro4TaskISt8optionalIN6QTimer14QPrivateSignalEEED2Ev@Base 0.5.0
+#MISSING: 0.10.0# (optional=templinst)_ZN5QCoro4TaskISt8optionalIN7QThread14QPrivateSignalEEED1Ev@Base 0.5.0
+#MISSING: 0.10.0# (optional=templinst)_ZN5QCoro4TaskISt8optionalIN7QThread14QPrivateSignalEEED2Ev@Base 0.5.0
+#MISSING: 0.10.0# (optional=templinst)_ZN5QCoro4TaskISt8optionalIN8QProcess14QPrivateSignalEEED1Ev@Base 0.5.0
+#MISSING: 0.10.0# (optional=templinst)_ZN5QCoro4TaskISt8optionalIN8QProcess14QPrivateSignalEEED2Ev@Base 0.5.0
+ (optional=templinst)_ZN5QCoro4TaskISt8optionalISt5tupleIJEEEED1Ev@Base 0.10.0
+ (optional=templinst)_ZN5QCoro4TaskISt8optionalISt5tupleIJEEEED2Ev@Base 0.10.0
  (optional=templinst)_ZN5QCoro4TaskISt8optionalISt5tupleIJiN8QProcess10ExitStatusEEEEED1Ev@Base 0.5.0
  (optional=templinst)_ZN5QCoro4TaskISt8optionalISt5tupleIJiN8QProcess10ExitStatusEEEEED2Ev@Base 0.5.0
  (optional=templinst)_ZN5QCoro4TaskISt8optionalIbEED1Ev@Base 0.5.0
@@ -50,10 +54,12 @@ libQCoro6Core.so.0 libqcoro6core0 #MINVER#
  _ZN5QCoro6detail11QCoroThreadC1EP7QThread@Base 0.5.0
  _ZN5QCoro6detail11QCoroThreadC2EP7QThread@Base 0.5.0
  (optional=templinst)_ZN5QCoro6detail11TaskPromiseI10QByteArrayE19unhandled_exceptionEv@Base 0.5.0
- (optional=templinst)_ZN5QCoro6detail11TaskPromiseIN6QTimer14QPrivateSignalEE19unhandled_exceptionEv@Base 0.5.0
- (optional=templinst)_ZN5QCoro6detail11TaskPromiseISt8optionalIN6QTimer14QPrivateSignalEEE19unhandled_exceptionEv@Base 0.5.0
- (optional=templinst)_ZN5QCoro6detail11TaskPromiseISt8optionalIN7QThread14QPrivateSignalEEE19unhandled_exceptionEv@Base 0.5.0
- (optional=templinst)_ZN5QCoro6detail11TaskPromiseISt8optionalIN8QProcess14QPrivateSignalEEE19unhandled_exceptionEv@Base 0.5.0
+#MISSING: 0.10.0# (optional=templinst)_ZN5QCoro6detail11TaskPromiseIN6QTimer14QPrivateSignalEE19unhandled_exceptionEv@Base 0.5.0
+ (optional=templinst)_ZN5QCoro6detail11TaskPromiseISt5tupleIJEEE19unhandled_exceptionEv@Base 0.10.0
+#MISSING: 0.10.0# (optional=templinst)_ZN5QCoro6detail11TaskPromiseISt8optionalIN6QTimer14QPrivateSignalEEE19unhandled_exceptionEv@Base 0.5.0
+#MISSING: 0.10.0# (optional=templinst)_ZN5QCoro6detail11TaskPromiseISt8optionalIN7QThread14QPrivateSignalEEE19unhandled_exceptionEv@Base 0.5.0
+#MISSING: 0.10.0# (optional=templinst)_ZN5QCoro6detail11TaskPromiseISt8optionalIN8QProcess14QPrivateSignalEEE19unhandled_exceptionEv@Base 0.5.0
+ (optional=templinst)_ZN5QCoro6detail11TaskPromiseISt8optionalISt5tupleIJEEEE19unhandled_exceptionEv@Base 0.10.0
  (optional=templinst)_ZN5QCoro6detail11TaskPromiseISt8optionalISt5tupleIJiN8QProcess10ExitStatusEEEEE19unhandled_exceptionEv@Base 0.5.0
  (optional=templinst)_ZN5QCoro6detail11TaskPromiseISt8optionalIbEE19unhandled_exceptionEv@Base 0.5.0
  (optional=templinst)_ZN5QCoro6detail11TaskPromiseISt8optionalIxEE19unhandled_exceptionEv@Base 0.5.0
@@ -168,7 +174,7 @@ libQCoro6Core.so.0 libqcoro6core0 #MINVER#
 #MISSING: 0.9.0# (optional=templinst)_ZN9QtPrivate26QDataStreamOperatorForTypeIbLb1EE13dataStreamOutEPKNS_18QMetaTypeInterfaceER11QDataStreamPKv@Base 0.5.0
 #MISSING: 0.9.0# (optional=templinst)_ZN9QtPrivate26QDataStreamOperatorForTypeIxLb1EE12dataStreamInEPKNS_18QMetaTypeInterfaceER11QDataStreamPv@Base 0.5.0
 #MISSING: 0.9.0# (optional=templinst)_ZN9QtPrivate26QDataStreamOperatorForTypeIxLb1EE13dataStreamOutEPKNS_18QMetaTypeInterfaceER11QDataStreamPKv@Base 0.5.0
- (optional=templinst)_ZN9QtPrivate27QDebugStreamOperatorForTypeIN8QProcess10ExitStatusELb1EE11debugStreamEPKNS_18QMetaTypeInterfaceER6QDebugPKv@Base 0.5.0
+#MISSING: 0.10.0# (optional=templinst)_ZN9QtPrivate27QDebugStreamOperatorForTypeIN8QProcess10ExitStatusELb1EE11debugStreamEPKNS_18QMetaTypeInterfaceER6QDebugPKv@Base 0.5.0
  _ZNK5QCoro13ThreadContext11await_readyEv@Base 0.8.0
  _ZNK5QCoro6detail10QCoroTimer14waitForTimeoutEv@Base 0.4.0
  _ZNK5QCoro6detail10QCoroTimer23WaitForTimeoutOperation11await_readyEv@Base 0.4.0
@@ -189,7 +195,8 @@ libQCoro6Core.so.0 libqcoro6core0 #MINVER#
  _ZNSt19bad_optional_accessD1Ev@Base 0.5.0
  _ZNSt19bad_optional_accessD2Ev@Base 0.5.0
  (optional=templinst)_ZNSt8__detail9__variant16_Variant_storageILb0EJSt9monostate10QByteArrayNSt15__exception_ptr13exception_ptrEEE8_M_resetEv@Base 0.5.0
- (optional=templinst)_ZNSt8__detail9__variant16_Variant_storageILb0EJSt9monostateSt8optionalIN7QThread14QPrivateSignalEENSt15__exception_ptr13exception_ptrEEE8_M_resetEv@Base 0.5.0
+#MISSING: 0.10.0# (optional=templinst)_ZNSt8__detail9__variant16_Variant_storageILb0EJSt9monostateSt8optionalIN7QThread14QPrivateSignalEENSt15__exception_ptr13exception_ptrEEE8_M_resetEv@Base 0.5.0
+ (optional=templinst)_ZNSt8__detail9__variant16_Variant_storageILb0EJSt9monostateSt8optionalISt5tupleIJEEENSt15__exception_ptr13exception_ptrEEE8_M_resetEv@Base 0.10.0
  (optional=templinst)_ZNSt8__detail9__variant16_Variant_storageILb0EJSt9monostateSt8optionalIbENSt15__exception_ptr13exception_ptrEEE8_M_resetEv@Base 0.5.0
  (optional=templinst)_ZNSt8__detail9__variant16_Variant_storageILb0EJSt9monostateSt8optionalIxENSt15__exception_ptr13exception_ptrEEE8_M_resetEv@Base 0.5.0
  (optional=templinst)_ZNSt8__detail9__variant16_Variant_storageILb0EJSt9monostatebNSt15__exception_ptr13exception_ptrEEE8_M_resetEv@Base 0.5.0

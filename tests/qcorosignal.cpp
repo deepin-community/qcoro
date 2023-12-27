@@ -24,12 +24,18 @@ public:
         Q_EMIT voidSignal();
         Q_EMIT singleArg(QStringLiteral("YAY!"));
         Q_EMIT multiArg(QStringLiteral("YAY!"), 42, this);
+        Q_EMIT privateVoid(QPrivateSignal{});
+        Q_EMIT privateSingleArg(QStringLiteral("YAY!"), QPrivateSignal{});
+        Q_EMIT privateMultiArg(QStringLiteral("YAY!"), 42, this, QPrivateSignal{});
     }
 
 Q_SIGNALS:
     void voidSignal();
     void singleArg(const QString &);
     void multiArg(const QString &, int, QObject *);
+    void privateVoid(QPrivateSignal);
+    void privateSingleArg(const QString &, QPrivateSignal);
+    void privateMultiArg(const QString &, int, QObject *, QPrivateSignal);
 };
 
 class MultiSignalTest : public SignalTest {
@@ -218,6 +224,34 @@ private:
         QCORO_COMPARE(result, QStringLiteral("YAY!YAY!"));
     }
 
+    QCoro::Task<> testVoidQPrivateSignal_coro(QCoro::TestContext) {
+        SignalTest obj;
+
+        const auto result = co_await qCoro(&obj, &SignalTest::privateVoid);
+        static_assert(std::is_same_v<decltype(result), const std::tuple<>>);
+        Q_UNUSED(result);
+    }
+
+    QCoro::Task<> testSingleArgQPrivateSignal_coro(QCoro::TestContext) {
+        SignalTest obj;
+
+        const auto result = co_await qCoro(&obj, &SignalTest::privateSingleArg);
+        static_assert(std::is_same_v<decltype(result), const QString>);
+        QCORO_COMPARE(result, QStringLiteral("YAY!"));
+    }
+
+    QCoro::Task<> testMultiArgQPrivateSignal_coro(QCoro::TestContext) {
+        SignalTest obj;
+
+        const auto [str, num, ptr] = co_await qCoro(&obj, &SignalTest::privateMultiArg);
+        static_assert(std::is_same_v<decltype(str), const QString>);
+        static_assert(std::is_same_v<decltype(num), const int>);
+        static_assert(std::is_same_v<decltype(ptr), QObject * const>);
+        QCORO_COMPARE(str, QStringLiteral("YAY!"));
+        QCORO_COMPARE(num, 42);
+        QCORO_COMPARE(ptr, &obj);
+    }
+
     QCoro::Task<> testSignalListenerVoid_coro(QCoro::TestContext) {
         MultiSignalTest obj;
 
@@ -310,6 +344,56 @@ private:
         QCORO_COMPARE(co_await msg2, 2);
     }
 
+    QCoro::Task<> testSignalListenerQPrivateSignalVoid_coro(QCoro::TestContext) {
+        MultiSignalTest obj;
+
+        auto generator = qCoroSignalListener(&obj, &MultiSignalTest::privateVoid);
+        int count = 0;
+        QCORO_FOREACH(const auto &value, generator) {
+            static_assert(std::is_same_v<decltype(value), const std::tuple<> &>);
+            Q_UNUSED(value);
+            if (++count == 10) {
+                break;
+            }
+        }
+
+        QCORO_COMPARE(count, 10);
+    }
+
+    QCoro::Task<> testSignalListenerQPrivateSignalValue_coro(QCoro::TestContext) {
+         MultiSignalTest obj;
+
+        auto generator = qCoroSignalListener(&obj, &MultiSignalTest::privateSingleArg);
+        int count = 0;
+        QCORO_FOREACH(const auto &value, generator) {
+            static_assert(std::is_same_v<decltype(value), const QString &>);
+            QCORO_COMPARE(value, QStringLiteral("YAY!"));
+            if (++count == 10) {
+                break;
+            }
+        }
+
+        QCORO_COMPARE(count, 10);
+    }
+
+    QCoro::Task<> testSignalListenerQPrivateSignalTuple_coro(QCoro::TestContext) {
+        MultiSignalTest obj;
+
+        auto generator = qCoroSignalListener(&obj, &MultiSignalTest::privateMultiArg);
+        int count = 0;
+        QCORO_FOREACH(const auto &value, generator) {
+            static_assert(std::is_same_v<decltype(value), const std::tuple<QString, int, QObject *> &>);
+            QCORO_COMPARE(std::get<QString>(value), QStringLiteral("YAY!"));
+            QCORO_COMPARE(std::get<int>(value), 42);
+            QCORO_COMPARE(std::get<QObject *>(value), &obj);
+            if (++count == 10) {
+                break;
+            }
+        }
+
+        QCORO_COMPARE(count, 10);
+    }
+
 private Q_SLOTS:
     addTest(Triggers)
     addTest(ReturnsValue)
@@ -321,6 +405,9 @@ private Q_SLOTS:
     addTest(TimeoutTuple)
     addTest(TimeoutTriggersTuple)
     addTest(ThenChained)
+    addTest(VoidQPrivateSignal)
+    addTest(SingleArgQPrivateSignal)
+    addTest(MultiArgQPrivateSignal)
     addThenTest(Triggers)
     addThenTest(ReturnsValue)
     addThenTest(ReturnsTuple)
@@ -330,6 +417,9 @@ private Q_SLOTS:
     addTest(SignalListenerTimeout)
     addTest(SignalListenerQueue)
     addTest(SignalAfterListenerQuits)
+    addTest(SignalListenerQPrivateSignalVoid)
+    addTest(SignalListenerQPrivateSignalValue)
+    addTest(SignalListenerQPrivateSignalTuple)
 };
 
 QTEST_GUILESS_MAIN(QCoroSignalTest)

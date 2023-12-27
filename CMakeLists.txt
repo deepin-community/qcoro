@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.18.4)
-set(qcoro_VERSION 0.9.0)
+set(qcoro_VERSION 0.10.0)
 set(qcoro_SOVERSION 0)
 project(qcoro LANGUAGES CXX VERSION ${qcoro_VERSION})
 
@@ -105,7 +105,10 @@ if (MSVC)
     set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} /W4 /WX")
     # Disable warning C5054: "operator '&': deprecated between enumerations of different types" caused by QtWidgets/qsizepolicy.h
     # Disable warning C4127: "conditional expression is constant" caused by QtCore/qiterable.h
-    set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} /wd5054 /wd4127")
+    if ("${QT_VERSION_MAJOR}" STREQUAL "6" AND "${Qt6_VERSION}" VERSION_GREATER_EQUAL "6.4.0" AND "${Qt6_VERSION}" VERSION_LESS "6.5.3")
+        # Disable warning C4702: "unreachable code" caused by QtTest/qtestcase.h - fixed in Qt 6.5.3
+        set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} /wd5054 /wd4127 /wd4702")
+    endif()
 
     if (CMAKE_CXX_COMPILER_ID STREQUAL "Clang")
         # Explicitly enable exceptions support for clang-cl (it's only enabled by CMake when targeting the Windows-MSVC platform,
@@ -120,6 +123,7 @@ endif()
 if (QCORO_ENABLE_ASAN)
     if (MSVC)
         set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /INCREMENTAL:NO")
+        set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} /INCREMENTAL:NO")
         if (CMAKE_CXX_COMPILER_ID STREQUAL "Clang")
             set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fsanitize=address")
         else()
@@ -161,6 +165,15 @@ add_code_coverage_all_targets(EXCLUDE "${CMAKE_BINARY_DIR}" tests/utils/*)
 #-----------------------------------------------------------#
 # Definitions
 #-----------------------------------------------------------#
+
+# debug suffixes for qmake compatibility
+if(WIN32)
+    set(CMAKE_DEBUG_POSTFIX "d")
+elseif(APPLE)
+    set(CMAKE_DEBUG_POSTFIX "_debug")
+else()
+    set(CMAKE_DEBUG_POSTFIX "")
+endif()
 
 set(QCORO_TARGET_PREFIX "QCoro${QT_VERSION_MAJOR}")
 set(QCORO_INSTALL_INCLUDEDIR "${CMAKE_INSTALL_INCLUDEDIR}/qcoro${QT_VERSION_MAJOR}")

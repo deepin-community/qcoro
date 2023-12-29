@@ -1,10 +1,9 @@
-# SymbolsHelper-Confirmed: 0.10.0 amd64 i386
+# SymbolsHelper-Confirmed: 0.10.0 amd64 arm64
 libQCoro6Qml.so.0 libqcoro6qml0 #MINVER#
 * Build-Depends-Package: qcoro-qt6-dev
  (optional=templinst)_Z41qRegisterNormalizedMetaTypeImplementationI8QJSValueEiRK10QByteArray@Base 0.7.0
  (optional=templinst)_Z41qRegisterNormalizedMetaTypeImplementationIN5QCoro7QmlTaskEEiRK10QByteArray@Base 0.7.0
  _Z8qcoroqmlv@Base 0.7.0
-#MISSING: 0.9.0# (optional=templinst)_ZN12QMetaTypeId2I8QVariantE11nameAsArrayE@Base 0.7.0
  (optional=templinst)_ZN12QWeakPointerI7QObjectED1Ev@Base 0.9.0
  (optional=templinst)_ZN12QWeakPointerI7QObjectED2Ev@Base 0.9.0
  (optional=templinst)_ZN17QArrayDataPointerI8QJSValueED1Ev@Base 0.7.0
@@ -42,21 +41,18 @@ libQCoro6Qml.so.0 libqcoro6qml0 #MINVER#
  _ZN9QtPrivate16QMetaTypeForTypeIN5QCoro15QmlTaskListenerEE4nameE@Base 0.9.0
  _ZN9QtPrivate16QMetaTypeForTypeIN5QCoro7QmlTaskEE4nameE@Base 0.7.0
  _ZN9QtPrivate16QMetaTypeForTypeIPN5QCoro15QmlTaskListenerEE4nameE@Base 0.9.0
+ (optional=templinst)_ZN9QtPrivate17MetaObjectForTypeIN5QCoro15QmlTaskListenerEvE18metaObjectFunctionEPKNS_18QMetaTypeInterfaceE@Base 0.10.0
  (optional=templinst)_ZN9QtPrivate17MetaObjectForTypeIN5QCoro7QmlTaskEvE18metaObjectFunctionEPKNS_18QMetaTypeInterfaceE@Base 0.7.0
  (optional=templinst)_ZN9QtPrivate17MetaObjectForTypeIPN5QCoro15QmlTaskListenerEvE18metaObjectFunctionEPKNS_18QMetaTypeInterfaceE@Base 0.9.0
  (optional=templinst)_ZN9QtPrivate24QEqualityOperatorForTypeI16QQmlListPropertyIN5QCoro15QmlTaskListenerEELb1EE6equalsEPKNS_18QMetaTypeInterfaceEPKvSA_@Base 0.9.0
-#MISSING: 0.9.0# (optional=templinst)_ZN9QtPrivate24QEqualityOperatorForTypeI8QVariantLb1EE6equalsEPKNS_18QMetaTypeInterfaceEPKvS7_@Base 0.7.0
  _ZN9QtPrivate25QMetaTypeInterfaceWrapperI16QQmlListPropertyIN5QCoro15QmlTaskListenerEEE8metaTypeE@Base 0.9.0
  _ZN9QtPrivate25QMetaTypeInterfaceWrapperI8QJSValueE8metaTypeE@Base 0.7.0
-#MISSING: 0.9.0# (optional=templinst)_ZN9QtPrivate25QMetaTypeInterfaceWrapperI8QVariantE8metaTypeE@Base 0.7.0
  _ZN9QtPrivate25QMetaTypeInterfaceWrapperIN5QCoro15QmlTaskListenerEE8metaTypeE@Base 0.9.0
  _ZN9QtPrivate25QMetaTypeInterfaceWrapperIN5QCoro7QmlTaskEE8metaTypeE@Base 0.7.0
  _ZN9QtPrivate25QMetaTypeInterfaceWrapperIPN5QCoro15QmlTaskListenerEE8metaTypeE@Base 0.9.0
+ _ZN9QtPrivate25QMetaTypeInterfaceWrapperIvE8metaTypeE@Base 0.10.0
  (optional=templinst)_ZN9QtPrivate26QDataStreamOperatorForTypeI8QJSValueLb1EE12dataStreamInEPKNS_18QMetaTypeInterfaceER11QDataStreamPv@Base 0.7.0
  (optional=templinst)_ZN9QtPrivate26QDataStreamOperatorForTypeI8QJSValueLb1EE13dataStreamOutEPKNS_18QMetaTypeInterfaceER11QDataStreamPKv@Base 0.7.0
-#MISSING: 0.9.0# (optional=templinst)_ZN9QtPrivate26QDataStreamOperatorForTypeI8QVariantLb1EE12dataStreamInEPKNS_18QMetaTypeInterfaceER11QDataStreamPv@Base 0.7.0
-#MISSING: 0.9.0# (optional=templinst)_ZN9QtPrivate26QDataStreamOperatorForTypeI8QVariantLb1EE13dataStreamOutEPKNS_18QMetaTypeInterfaceER11QDataStreamPKv@Base 0.7.0
-#MISSING: 0.9.0# (optional=templinst)_ZN9QtPrivate27QDebugStreamOperatorForTypeI8QVariantLb1EE11debugStreamEPKNS_18QMetaTypeInterfaceER6QDebugPKv@Base 0.7.0
  _ZNK5QCoro15QmlTaskListener10metaObjectEv@Base 0.9.0
  _ZNK5QCoro15QmlTaskListener5valueEv@Base 0.9.0
  _ZNKSt18bad_variant_access4whatEv@Base 0.7.0
@@ -64,7 +60,7 @@ libQCoro6Qml.so.0 libqcoro6qml0 #MINVER#
  _ZNSt18bad_variant_accessD1Ev@Base 0.7.0
  _ZNSt18bad_variant_accessD2Ev@Base 0.7.0
  _ZSt26__throw_bad_variant_accessPKc@Base 0.7.0
- (arch=amd64)_ZSt26__throw_bad_variant_accessb@Base 0.9.0
+ _ZSt26__throw_bad_variant_accessb@Base 0.10.0
  _ZTIN5QCoro15QmlTaskListenerE@Base 0.9.0
  _ZTISt18bad_variant_access@Base 0.7.0
  _ZTSN5QCoro15QmlTaskListenerE@Base 0.9.0
@@ -74,18 +70,12 @@ libQCoro6Qml.so.0 libqcoro6qml0 #MINVER#
  (optional=templinst)_ZZN11QMetaTypeIdI8QJSValueE14qt_metatype_idEvE11metatype_id@Base 0.7.0
  (optional=templinst)_ZZN11QMetaTypeIdIN5QCoro7QmlTaskEE14qt_metatype_idEvE11metatype_id@Base 0.7.0
  (optional=templinst)_ZZN18QMetaTypeIdQObjectIPN5QCoro15QmlTaskListenerELi8EE14qt_metatype_idEvE11metatype_id@Base 0.9.0
- (optional=templinst)_ZZN9QtPrivate16QMetaTypeForTypeI16QQmlListPropertyIN5QCoro15QmlTaskListenerEEE10getCopyCtrEvENUlPKNS_18QMetaTypeInterfaceEPvPKvE_4_FUNES8_S9_SB_@Base 0.9.0
- (optional=templinst)_ZZN9QtPrivate16QMetaTypeForTypeI16QQmlListPropertyIN5QCoro15QmlTaskListenerEEE10getMoveCtrEvENUlPKNS_18QMetaTypeInterfaceEPvS9_E_4_FUNES8_S9_S9_@Base 0.9.0
  (optional=templinst)_ZZN9QtPrivate16QMetaTypeForTypeI16QQmlListPropertyIN5QCoro15QmlTaskListenerEEE13getDefaultCtrEvENUlPKNS_18QMetaTypeInterfaceEPvE_4_FUNES8_S9_@Base 0.9.0
  (optional=templinst)_ZZN9QtPrivate16QMetaTypeForTypeI8QJSValueE10getCopyCtrEvENUlPKNS_18QMetaTypeInterfaceEPvPKvE_4_FUNES5_S6_S8_@Base 0.7.0
  (optional=templinst)_ZZN9QtPrivate16QMetaTypeForTypeI8QJSValueE10getMoveCtrEvENUlPKNS_18QMetaTypeInterfaceEPvS6_E_4_FUNES5_S6_S6_@Base 0.7.0
  (optional=templinst)_ZZN9QtPrivate16QMetaTypeForTypeI8QJSValueE13getDefaultCtrEvENUlPKNS_18QMetaTypeInterfaceEPvE_4_FUNES5_S6_@Base 0.7.0
  (optional=templinst)_ZZN9QtPrivate16QMetaTypeForTypeI8QJSValueE17getLegacyRegisterEvENUlvE_4_FUNEv@Base 0.7.0
  (optional=templinst)_ZZN9QtPrivate16QMetaTypeForTypeI8QJSValueE7getDtorEvENUlPKNS_18QMetaTypeInterfaceEPvE_4_FUNES5_S6_@Base 0.7.0
-#MISSING: 0.9.0# (optional=templinst)_ZZN9QtPrivate16QMetaTypeForTypeI8QVariantE10getCopyCtrEvENUlPKNS_18QMetaTypeInterfaceEPvPKvE_4_FUNES5_S6_S8_@Base 0.7.0
-#MISSING: 0.9.0# (optional=templinst)_ZZN9QtPrivate16QMetaTypeForTypeI8QVariantE10getMoveCtrEvENUlPKNS_18QMetaTypeInterfaceEPvS6_E_4_FUNES5_S6_S6_@Base 0.7.0
-#MISSING: 0.9.0# (optional=templinst)_ZZN9QtPrivate16QMetaTypeForTypeI8QVariantE13getDefaultCtrEvENUlPKNS_18QMetaTypeInterfaceEPvE_4_FUNES5_S6_@Base 0.7.0
-#MISSING: 0.9.0# (optional=templinst)_ZZN9QtPrivate16QMetaTypeForTypeI8QVariantE7getDtorEvENUlPKNS_18QMetaTypeInterfaceEPvE_4_FUNES5_S6_@Base 0.7.0
  (optional=templinst)_ZZN9QtPrivate16QMetaTypeForTypeIN5QCoro15QmlTaskListenerEE13getDefaultCtrEvENUlPKNS_18QMetaTypeInterfaceEPvE_4_FUNES6_S7_@Base 0.9.0
  (optional=templinst)_ZZN9QtPrivate16QMetaTypeForTypeIN5QCoro15QmlTaskListenerEE7getDtorEvENUlPKNS_18QMetaTypeInterfaceEPvE_4_FUNES6_S7_@Base 0.9.0
  (optional=templinst)_ZZN9QtPrivate16QMetaTypeForTypeIN5QCoro7QmlTaskEE10getCopyCtrEvENUlPKNS_18QMetaTypeInterfaceEPvPKvE_4_FUNES6_S7_S9_@Base 0.7.0
@@ -93,7 +83,4 @@ libQCoro6Qml.so.0 libqcoro6qml0 #MINVER#
  (optional=templinst)_ZZN9QtPrivate16QMetaTypeForTypeIN5QCoro7QmlTaskEE13getDefaultCtrEvENUlPKNS_18QMetaTypeInterfaceEPvE_4_FUNES6_S7_@Base 0.7.0
  (optional=templinst)_ZZN9QtPrivate16QMetaTypeForTypeIN5QCoro7QmlTaskEE17getLegacyRegisterEvENUlvE_4_FUNEv@Base 0.7.0
  (optional=templinst)_ZZN9QtPrivate16QMetaTypeForTypeIN5QCoro7QmlTaskEE7getDtorEvENUlPKNS_18QMetaTypeInterfaceEPvE_4_FUNES6_S7_@Base 0.7.0
- (optional=templinst)_ZZN9QtPrivate16QMetaTypeForTypeIPN5QCoro15QmlTaskListenerEE10getCopyCtrEvENUlPKNS_18QMetaTypeInterfaceEPvPKvE_4_FUNES7_S8_SA_@Base 0.9.0
- (optional=templinst)_ZZN9QtPrivate16QMetaTypeForTypeIPN5QCoro15QmlTaskListenerEE10getMoveCtrEvENUlPKNS_18QMetaTypeInterfaceEPvS8_E_4_FUNES7_S8_S8_@Base 0.9.0
- (optional=templinst)_ZZN9QtPrivate16QMetaTypeForTypeIPN5QCoro15QmlTaskListenerEE13getDefaultCtrEvENUlPKNS_18QMetaTypeInterfaceEPvE_4_FUNES7_S8_@Base 0.9.0
  (optional=templinst)_ZZN9QtPrivate16QMetaTypeForTypeIPN5QCoro15QmlTaskListenerEE17getLegacyRegisterEvENUlvE_4_FUNEv@Base 0.9.0

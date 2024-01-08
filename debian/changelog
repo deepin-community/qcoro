@@ -1,3 +1,9 @@
+qcoro (0.10.0-1deepin2) unstable; urgency=medium
+
+  * update symbols for riscv64
+
+ -- Chang Yang <yangchang@deepin.org>  Mon, 08 Jan 2024 14:05:48 +0800
+
 qcoro (0.10.0-1deepin1) unstable; urgency=medium
 
   * Update symbols files.

@@ -60,7 +60,7 @@ libQCoro6Qml.so.0 libqcoro6qml0 #MINVER#
  _ZNSt18bad_variant_accessD1Ev@Base 0.7.0
  _ZNSt18bad_variant_accessD2Ev@Base 0.7.0
  _ZSt26__throw_bad_variant_accessPKc@Base 0.7.0
- _ZSt26__throw_bad_variant_accessb@Base 0.10.0
+ (arch=!riscv64)_ZSt26__throw_bad_variant_accessb@Base 0.10.0
  _ZTIN5QCoro15QmlTaskListenerE@Base 0.9.0
  _ZTISt18bad_variant_access@Base 0.7.0
  _ZTSN5QCoro15QmlTaskListenerE@Base 0.9.0

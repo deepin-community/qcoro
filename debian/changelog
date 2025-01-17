@@ -1,3 +1,9 @@
+qcoro (0.10.0-1deepin3) unstable; urgency=medium
+
+  * update symbols for loong64
+
+ -- zhangkun <zhangkun2@uniontech.com>  Fri, 17 Jan 2025 18:36:45 +0800
+
 qcoro (0.10.0-1deepin2) unstable; urgency=medium
 
   * update symbols for riscv64

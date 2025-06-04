@@ -1,3 +1,9 @@
+qcoro (0.10.0-1deepin4) unstable; urgency=medium
+
+  * feat: add sw64 support.
+
+ -- hudeng <hudeng@deepin.org>  Wed, 04 Jun 2025 16:17:41 +0800
+
 qcoro (0.10.0-1deepin3) unstable; urgency=medium
 
   * update symbols for loong64
